@@ -12,6 +12,7 @@ redirect_from:
 {: #about-me}
 
 I am an incoming Ph.D. student in Computer Science at the College of Computer Science and Technology, Zhejiang University, starting in Fall 2027, advised by Prof. Bohan Zhuang. I am currently a fourth-year undergraduate student at the School of Artificial Intelligence, Nanjing University.
+
 My future research interests focus on embodied agents and novel embodied model architectures. I have previously explored LLM post-training, LLM agents, and VLA/WM extensively.
 
 
