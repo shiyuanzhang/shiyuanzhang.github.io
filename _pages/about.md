@@ -25,14 +25,30 @@ To be added.
 ## Education
 {: #education}
 
-To be added.
+{% include experience-entry.html
+  logo="/images/zhejiang-university-logo.png"
+  institution="Zhejiang University"
+  institution_url="https://www.zju.edu.cn/english/"
+  dates="2027–"
+  role="Incoming Ph.D. Student in Computer Science"
+  details="College of Computer Science and Technology<br>Advisor: [Prof. Bohan Zhuang](https://bohanzhuang.github.io/)"
+%}
+
+{% include experience-entry.html
+  logo="/images/nanjing-university-logo.jpg"
+  institution="Nanjing University"
+  institution_url="https://www.nju.edu.cn/en/"
+  dates="2023–2027"
+  role="Undergraduate Student"
+  details="School of Artificial Intelligence"
+%}
 
 ## Awards
 {: #honors}
 
-1. National Scholarship of China
-2. National Special Prize in the Main Competition of the Challenge Cup (one of the seven reporting projects at the closing ceremony)
-3. Nanjing University Science and Technology Innovation Scholarship
-4. International First Prize in the Mathematical Contest in Modeling (MCM/ICM)
-5. GeoX Interdisciplinary Project for Young Students, Frontiers Science Center for Critical Earth Material Cycling
+- National Scholarship of China
+- National Special Prize in the Main Competition of the Challenge Cup (one of the seven reporting projects at the closing ceremony)
+- Nanjing University Science and Technology Innovation Scholarship
+- International First Prize in the Mathematical Contest in Modeling (MCM/ICM)
+- GeoX Interdisciplinary Project for Young Students, Frontiers Science Center for Critical Earth Material Cycling
 

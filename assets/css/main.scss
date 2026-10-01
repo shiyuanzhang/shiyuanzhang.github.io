@@ -73,3 +73,8 @@
   .experience-entry__logo img { max-width: 72px; max-height: 72px; }
   .experience-entry--text-only { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+/* Use bullet markers for all content lists, including pasted ordered lists. */
+.page__content ul,
+.page__content ol { list-style-type: disc; }
