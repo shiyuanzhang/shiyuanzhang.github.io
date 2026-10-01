@@ -1,5 +1,6 @@
 - title: "Efficient Test-Time Optimization for Multi-Agent Proof Autoformalization"
-  authors: "Tian-Shuo Liu, **Shiyuan Zhang**, Zijie Geng, Haoyu Liu, Runjie Xu, Pengyuan Wang, Lei Yuan, Yang Yu"
+  authors: "Tian-Shuo Liu<sup>*</sup>, **Shiyuan Zhang**<sup>*</sup>, Zijie Geng, Haoyu Liu, Runjie Xu, Pengyuan Wang, Lei Yuan, Yang Yu"
+  contribution_note: "* Equal contribution"
   venue: "Preprint, 2026"
   image: "/images/publications/tomap.png"
   paper_url: "https://arxiv.org/abs/2607.11307"

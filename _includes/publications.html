@@ -6,6 +6,7 @@
   <div class="publication-entry__body">
     <div class="publication-entry__title"><a href="{{ paper.paper_url | escape }}">{{ paper.title | escape }}</a></div>
     <div class="publication-entry__authors">{{ paper.authors | markdownify }}</div>
+    {% if paper.contribution_note %}<div class="publication-entry__contribution"><small>{{ paper.contribution_note | escape }}</small></div>{% endif %}
     <div class="publication-entry__venue">{{ paper.venue | escape }}</div>
     <div class="publication-entry__links"><a href="{{ paper.paper_url | escape }}">Paper</a> <span aria-hidden="true">/</span> <a href="{{ paper.pdf_url | escape }}">PDF</a></div>
     <p class="publication-entry__summary">{{ paper.summary | escape }}</p>
