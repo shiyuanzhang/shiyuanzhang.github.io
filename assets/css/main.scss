@@ -42,8 +42,9 @@
 
 /* Experience rows: institution logo on the left, details on the right. */
 .experience-entry {
+  --experience-logo-size: 110px;
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-columns: var(--experience-logo-size) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: center;
   margin: 1.5rem 0 2rem;
@@ -52,15 +53,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--experience-logo-size);
+  height: var(--experience-logo-size);
+  overflow: hidden;
+}
+.experience-entry__logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .experience-entry__logo img {
   display: block;
-  width: auto;
-  max-width: 110px;
-  max-height: 110px;
-  height: auto;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: 5%;
+  box-sizing: border-box;
   margin: 0;
+  border-radius: 0;
   object-fit: contain;
+}
+/* The supplied ZJU file has wide white margins. Match the artwork height
+   to the NJU emblem while trimming only the surrounding blank space. */
+.experience-entry__logo img[src*="zhejiang-university-logo"] {
+  padding: 0;
+  object-fit: cover;
+  transform: translate(2.4%, -2.5%) scale(1.31);
 }
 .experience-entry__institution { font-weight: 600; }
 .experience-entry__dates { color: #555; }
@@ -69,8 +91,7 @@
 .experience-entry__body { overflow-wrap: anywhere; }
 .experience-entry--text-only { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 480px) {
-  .experience-entry { grid-template-columns: 72px minmax(0, 1fr); gap: 1rem; }
-  .experience-entry__logo img { max-width: 72px; max-height: 72px; }
+  .experience-entry { --experience-logo-size: 72px; gap: 1rem; }
   .experience-entry--text-only { grid-template-columns: minmax(0, 1fr); }
 }
 

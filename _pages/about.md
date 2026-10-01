@@ -35,7 +35,7 @@ To be added.
 %}
 
 {% include experience-entry.html
-  logo="/images/nanjing-university-logo.jpg"
+  logo="/images/nanjing-university-logo-v2.jpg"
   institution="Nanjing University"
   institution_url="https://www.nju.edu.cn/en/"
   dates="2023–2027"
