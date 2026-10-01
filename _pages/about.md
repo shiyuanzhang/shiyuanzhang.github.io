@@ -1,54 +1,45 @@
 ---
 permalink: /
 title: ""
-description: "Shiyuan Zhang 的个人学术主页"
+excerpt: "Shiyuan Zhang — Academic Homepage"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-## 关于我
+# About Me
 {: #about-me}
 
-个人简介待补充。
-{: .placeholder}
+To be added.
 
-## 研究方向
+## Research Interests
 {: #research}
 
-待补充。
-{: .placeholder}
+To be added.
 
-## 最新动态
+## News
 {: #news}
 
-待补充。
-{: .placeholder}
+To be added.
 
-## 论文发表
-{: #publications}
-
-待补充。
-{: .placeholder}
-
-## 教育经历
+## Education
 {: #education}
 
-待补充。
-{: .placeholder}
+To be added.
 
-## 工作与实习
+## Work Experience
 {: #experience}
 
-待补充。
-{: .placeholder}
+To be added.
 
-## 荣誉奖励
+## Selected Publications
+{: #publications}
+
+To be added.
+
+## Awards
 {: #honors}
 
-待补充。
-{: .placeholder}
+To be added.
 
-
-<div class="site-credit">基于 <a href="https://github.com/RayeRen/acad-homepage.github.io">AcadHomepage</a> · Powered by GitHub Pages</div>
