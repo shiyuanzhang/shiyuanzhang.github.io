@@ -1,4 +1,4 @@
-# 张世元 · 学术主页
+# Shiyuan Zhang · 学术主页
 
 网站：https://shiyuanzhang.github.io/
 
