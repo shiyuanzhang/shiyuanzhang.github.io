@@ -99,3 +99,28 @@
 /* Use bullet markers for all content lists, including pasted ordered lists. */
 .page__content ul,
 .page__content ol { list-style-type: disc; }
+
+/* Inline academic links, with a blue palette throughout the homepage. */
+.page__content a,
+.page__content a:visited,
+.author__urls a,
+.author__urls a:visited {
+  color: #1765b3;
+  text-decoration: none;
+  text-shadow: none;
+  transition: color 0.15s ease;
+}
+.page__content a:hover,
+.page__content a:focus,
+.author__urls a:hover,
+.author__urls a:focus {
+  color: #0b4380;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.page__content a:focus-visible,
+.author__urls a:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
