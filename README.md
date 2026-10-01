@@ -1,26 +1,24 @@
-# Shiyuan Zhang · Academic Homepage
+#张世元 · 学术主页
 
-Website: https://shiyuanzhang.github.io/
+网站：https://shiyuanzhang.github.io/
 
-This homepage uses the layout, typography, sidebar, and styles from
-[zizhengpan/zizhengpan.github.io](https://github.com/zizhengpan/zizhengpan.github.io),
-based on AcademicPages and Minimal Mistakes. The original MIT license is retained.
+此主页基于AcademicPages和Minimal Mistakes。原MIT许可证仍然有效。
 
-## Editing the homepage
+##编辑主页
 
-- `_config.yml`: name, avatar, affiliation, location, and contact links. Empty fields are hidden.
-- `_pages/about.md`: biography, research interests, news, education, experience, publications, and awards.
-- `images/avatar.svg`: placeholder avatar. Upload your photo and set `author.avatar` to its filename.
-- `_data/navigation.yml`: top navigation. Only the name is shown, matching the reference site.
+- `_config.yml`：用于设置姓名、头像、所属机构、所在地及联系方式链接。空字段将被隐藏。
+- `_pages/about.md`：个人简介、研究兴趣、最新动态、教育背景、工作经历、发表论文及所获荣誉。
+author.avatar`设置为该文件名。
+- `_data/navigation.yml`: 顶部导航。仅显示名称，与参考网站保持一致。
 
-The site is hosted by `shiyuanzhang`; the profile link points to `fufu1013`.
-All personal information and academic content remain placeholders. Analytics is disabled.
-The entire homepage uses English, with no Chinese localization.
+该站点由`shiyuanzhang`托管；个人主页链接指向`fufu1013`.
+所有个人信息和学术内容均为占位符。分析功能已禁用。
+整个首页均采用英文，未进行中文本地化。
 
-## Deployment
+##部署
 
-GitHub Pages builds the root of the `main` branch automatically after each commit.
+`主分支`分支的根目录。
 
-## Local preview
+##本地预览
 
-Install Ruby and Bundler, then run `bundle install` and `bundle exec jekyll serve`.
+请先安装 Ruby 和 Bundler，然后运行`bundle install`以及`bundle exec jekyll serve`.
