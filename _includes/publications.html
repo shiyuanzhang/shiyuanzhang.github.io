@@ -1,0 +1,14 @@
+{% for paper in site.data.publications %}
+<article class="publication-entry">
+  <a class="publication-entry__image" href="{{ paper.paper_url | escape }}" aria-label="{{ paper.title | escape }}">
+    <img src="{{ paper.image | relative_url }}" alt="Overview of {{ paper.title | escape }}" loading="lazy">
+  </a>
+  <div class="publication-entry__body">
+    <div class="publication-entry__title"><a href="{{ paper.paper_url | escape }}">{{ paper.title | escape }}</a></div>
+    <div class="publication-entry__authors">{{ paper.authors | markdownify }}</div>
+    <div class="publication-entry__venue">{{ paper.venue | escape }}</div>
+    <div class="publication-entry__links"><a href="{{ paper.paper_url | escape }}">Paper</a> <span aria-hidden="true">/</span> <a href="{{ paper.pdf_url | escape }}">PDF</a></div>
+    <p class="publication-entry__summary">{{ paper.summary | escape }}</p>
+  </div>
+</article>
+{% endfor %}
