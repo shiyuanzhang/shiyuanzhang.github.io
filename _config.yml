@@ -71,8 +71,8 @@ author:
   location: null
   employer: null
   pubmed: null
-  googlescholar: null
-  email: null
+  googlescholar: 'https://scholar.google.com/citations?user=QWOYn6QAAAAJ'
+  email: zhangshiyuan66@126.com
   researchgate: null
   uri: null
   bitbucket: null
@@ -82,19 +82,20 @@ author:
   facebook: null
   foursquare: null
   github: fufu1013
+  xiaohongshu: 'https://www.xiaohongshu.com/user/profile/649fa68800000000100370ba'
   google_plus: null
   keybase: null
   instagram: null
   impactstory: null
   lastfm: null
-  linkedin: null
+  linkedin: shiyuan-zhang-915411440
   orcid: null
   pinterest: null
   soundcloud: null
   stackoverflow: null
   steam: null
   tumblr: null
-  twitter: null
+  twitter: ShiyuanZhang06
   vine: null
   weibo: null
   xing: null

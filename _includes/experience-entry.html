@@ -1,0 +1,17 @@
+<div class="experience-entry{% unless include.logo %} experience-entry--text-only{% endunless %}">
+  {% if include.logo %}
+  <div class="experience-entry__logo">
+    {% if include.institution_url %}<a href="{{ include.institution_url | escape }}">{% endif %}
+    <img src="{{ include.logo | relative_url }}" alt="{{ include.institution | escape }} logo" loading="lazy">
+    {% if include.institution_url %}</a>{% endif %}
+  </div>
+  {% endif %}
+  <div class="experience-entry__body">
+    <div class="experience-entry__institution">
+      {% if include.institution_url %}<a href="{{ include.institution_url | escape }}">{{ include.institution | escape }}</a>{% else %}{{ include.institution | escape }}{% endif %}
+    </div>
+    {% if include.dates %}<div class="experience-entry__dates">{{ include.dates | escape }}</div>{% endif %}
+    {% if include.role %}<div class="experience-entry__role">{{ include.role | escape }}</div>{% endif %}
+    {% if include.details %}<div class="experience-entry__details">{{ include.details | markdownify }}</div>{% endif %}
+  </div>
+</div>

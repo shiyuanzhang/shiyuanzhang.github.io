@@ -39,3 +39,37 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* Experience rows: institution logo on the left, details on the right. */
+.experience-entry {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+}
+.experience-entry__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experience-entry__logo img {
+  display: block;
+  width: auto;
+  max-width: 110px;
+  max-height: 110px;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+}
+.experience-entry__institution { font-weight: 600; }
+.experience-entry__dates { color: #555; }
+.experience-entry__role { font-weight: 600; }
+.experience-entry__details p { margin: 0; }
+.experience-entry__body { overflow-wrap: anywhere; }
+.experience-entry--text-only { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 480px) {
+  .experience-entry { grid-template-columns: 72px minmax(0, 1fr); gap: 1rem; }
+  .experience-entry__logo img { max-width: 72px; max-height: 72px; }
+  .experience-entry--text-only { grid-template-columns: minmax(0, 1fr); }
+}
