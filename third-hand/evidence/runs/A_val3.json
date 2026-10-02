@@ -1,0 +1,46 @@
+{
+  "success": false,
+  "gates": {
+    "continuous_from_initial": true,
+    "tray_entered_target": false,
+    "door_tray_clearance": false,
+    "no_door_tray_contact": true,
+    "hands_clear_before_push_2s": false,
+    "support_held_3s_before_push": false,
+    "support_carries_80_percent_during_push": false,
+    "motor_force_within_limit": true,
+    "contact_peak_within_limit": true,
+    "contact_over_budget_duration": true,
+    "penetration_within_limit": true
+  },
+  "measurements": {
+    "final_tray_x_m": 0.0,
+    "min_passing_clearance_m": null,
+    "support_before_push_s": 0.0,
+    "min_support_during_push_N": null,
+    "max_motor_N": 5.706,
+    "max_hand_contact_N": 5.576,
+    "contact_over_budget_s": 0.0,
+    "max_penetration_m": 4.7e-05,
+    "door_tray_contact_samples": 0,
+    "sim_s": 110.48,
+    "wall_s": 110.55539208650589,
+    "high_level_calls": 0,
+    "codex_usage": {
+      "input_tokens": 16945,
+      "output_tokens": 691,
+      "reasoning_output_tokens": 586
+    },
+    "controller": "learned",
+    "policy_mean_inference_ms": 0.39572935537242915
+  },
+  "thresholds": {
+    "support_N": 3.5316000000000005,
+    "minimum_clearance_m": 0.01,
+    "motor_N": 8.05,
+    "contact_peak_N": 12.0,
+    "contact_sustained_N": 8.5,
+    "contact_over_limit_allowance_s": 0.05,
+    "max_penetration_m": 0.004
+  }
+}

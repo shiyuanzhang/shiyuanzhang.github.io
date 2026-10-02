@@ -1,0 +1,25 @@
+--- frozen/astra_run.py
++++ supplemental/astra_extraction_run.py
+@@ -212,11 +212,11 @@
+         if layout.second_support is not None:
+             candidates += f" 青绿色 object_2：0.080×0.070×{layout.second_support[2]:.3f} m 的可移动方块。"
+         door_shape = f"门在 y≈{layout.door_y-0.18:.3f} m 的侧部有向下{layout.door_lip_depth:.3f} m的短凸缘。" if layout.door_lip_depth > 0 else ""
+-        prompt = f"""你是连续接触仿真的高层控制器。任务：把托盘沿 +x 移到出口外至少 0.30 m；全过程避免门碰托盘，并遵守每只手 8 N 外部操作力上限。你可以移动桌面物体。根据观察和执行结果选择**下一段**动作，动作结束后再获新观察。请不要预设动作成功。
++        prompt = f"""你是连续接触仿真的高层控制器。任务：把托盘沿 +x 从初始位置移动至少 0.375 m，让托盘后缘完全越过门口；托盘后缘初始 x=-0.340 m，门外侧 x=0.025 m，0.375 m 位移对应后缘净空 0.010 m，导轨位移上限为 0.380 m；全过程避免门碰托盘，并遵守每只手 8 N 外部操作力上限。你可以移动桌面物体。根据观察和执行结果选择**下一段**动作，动作结束后再获新观察。请不要预设动作成功。
+ 
+ 坐标单位米：x 正向是托盘出口；y 横向；z 向上。两张当前相机图像已附。几何状态辅助只给可见几何和手位姿，不给物体摩擦、质量或隐藏接触答案。蓝色竖直滑门 door：x=-0.025..0.025，y={layout.door_y-0.24:.3f}..{layout.door_y+0.24:.3f}，当前下缘见测量。{door_shape}红色托盘 tray：初始 x=-0.34..0，y={layout.tray_y-0.14:.3f}..{layout.tray_y+0.14:.3f}，顶面 z=0.070，只沿 x 导轨运动。{candidates}黄色球是两只平台手的接触垫。
+ 
+-接口：给一只或两只手设置世界坐标 target_xyz_m 和 0.1–8 N 电机合力上限 force_limit_N，执行 duration_s 秒；未指定的手保持当前位置。每手目标速度最多 0.020 m/s，电机限力 8 N。动作结束后保持达到的位置，等待你的下一条命令时物理仍继续。你最多有 30 次高层调用，已使用 {len(self.history)} 次；对无阻碍的长距离运动可以给较长时间，触碰与卸力时用短动作和小位移。不要输出完整流程，只给下一段动作目的和要检查的测量。
++接口：允许目标范围 x∈[-0.5,0.5] m、y∈[-0.4,0.4] m、z∈[0,0.3] m；超出范围的动作会被拒绝，不会执行。给一只或两只手设置世界坐标 target_xyz_m 和 0.1–8 N 电机合力上限 force_limit_N，执行 duration_s 秒；未指定的手保持当前位置。每手目标速度最多 0.020 m/s，电机限力 8 N。动作结束后保持达到的位置，等待你的下一条命令时物理仍继续。你最多有 30 次高层调用，已使用 {len(self.history)} 次；对无阻碍的长距离运动可以给较长时间，触碰与卸力时用短动作和小位移。不要输出完整流程，只给下一段动作目的和要检查的测量。
+ 
+ 当前公开观测：{json.dumps(observation, ensure_ascii=False)}
+ 最近动作与实测反馈：{json.dumps(self.history[-6:], ensure_ascii=False)}
+@@ -351,7 +351,7 @@
+                 run.history.append({"purpose": action["purpose"], "action": action, "feedback": after})
+                 with run.lock:
+                     np.savez_compressed(run.directory / f"{index:02d}_state.npz", **run.world.state())
+-                if after["tray_x_m"] >= 0.3:
++                if after["tray_x_m"] >= 0.375:
+                     print("tray reached target", flush=True)
+                     break
+     finally:
