@@ -11,7 +11,7 @@ redirect_from:
 I am an incoming Ph.D. student in Computer Science at the [College of Computer Science and Technology](https://www.en.cs.zju.edu.cn/), [Zhejiang University](https://www.zju.edu.cn/english/), starting in Fall 2027, advised by Prof. [Bohan Zhuang](https://bohanzhuang.github.io/). I am currently an undergraduate student at the [School of Artificial Intelligence](https://ai.nju.edu.cn/), [Nanjing University](https://www.nju.edu.cn/en/).
 {: #about-me}
 
-My research interests focus on embodied agents and novel embodied model architectures. I have previously explored LLM post-training, LLM agents, and VLA/WM extensively.
+My research interests focus on embodied agents and efficient embodied model architectures. I have previously explored LLM post-training, LLM agents, and VLA/WM extensively.
 
 
 
